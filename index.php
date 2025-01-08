@@ -31,6 +31,9 @@
 	<link rel="stylesheet" type="text/css" href="styles/responsive.css" />
 
 	<script defer type="text/javascript" src="main.js"></script>
+	<script
+		src="https://kit.fontawesome.com/b07f6a116c.js"
+		crossorigin="anonymous"></script>
 </head>
 
 <body>
