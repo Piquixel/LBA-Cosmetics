@@ -1,1 +1,14 @@
+@use 'sass:color';
+
 $accent-color: #c8605f;
+
+$fontFamily: 'Be Vietnam Pro', sans-serif;
+
+$white: #fff;
+$black: color.invert($white);
+
+$titleFont: 300 3.125rem/4rem $fontFamily;
+$secondaryTitleFont: 300 40px $fontFamily;
+
+$subTitleFont: 300 1.125rem/1.125rem $fontFamily;
+$interactionFont: 500 0.75rem/3rem $fontFamily;
