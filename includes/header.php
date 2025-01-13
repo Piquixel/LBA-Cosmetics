@@ -58,6 +58,7 @@
         <i class="fa-solid fa-bag-shopping"></i>
         </div>
 <div id="navbar-mobile-endpage">
+<i class="fa-solid fa-border-all"></i>
 <i class="fa-regular fa-user"></i>
 <i class="fa-solid fa-magnifying-glass"></i>
 <i class="fa-sharp fa-regular fa-heart"></i>
