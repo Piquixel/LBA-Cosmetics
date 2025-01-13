@@ -1,5 +1,5 @@
 <header>
-    <nav>
+    <nav id="navbar-desktop">
         <div>
         <div id="reseaux">
             <ul>
@@ -46,4 +46,23 @@
     </ul>
 </div>
     </nav>
+<nav id="navbar-mobile">
+<div>
+        <div id="sliding-container">
+            
+        </div>
+        <div>
+            <a href="./index.php"><img src="./images/logo.png"></a>
+        </div>
+        <div>
+        <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+<div id="navbar-mobile-endpage">
+<i class="fa-regular fa-user"></i>
+<i class="fa-solid fa-magnifying-glass"></i>
+<i class="fa-sharp fa-regular fa-heart"></i>
+</div>
+</div>
+</nav>
+
 </header>

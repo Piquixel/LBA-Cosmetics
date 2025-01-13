@@ -245,9 +245,25 @@
 			</div>
 		</section>
 		<!-- Gemini -->
-		<section id="to_shop"></section>
+		<section id="to_shop">
+			<div>
+				<div></div>
+				<div>
+					<p>Makeup & Life Blending</p>
+					<p>FOR FLAWLESS SKIN</p>
+					<a href="#" class="shopBtn">Shop now</a>
+				</div>
+			</div>
+		</section>
 		<!-- Gemini -->
-		<section id="help"></section>
+		<section id="help">
+			<h2>how can we help you?</h2>
+			<div>
+				<div><p>skincare</p><p>Get the scoop on must-have skincare routines and products for that glow-up. From...</p></div>
+				<div><p>makeup</p><p>Nail your makeup game with our guides, hot product picks, and trend alerts...</p></div>
+				<div><p>bodycare</p><p>Treat yourself to body care that keeps your skin smooth, hydrated, and glowing</p></div>
+			</div>
+		</section>
 		<!-- Ectho -->
 		<section class="listSliderRow" id="category_carousel">
 			<div class="titleContainer">
@@ -325,7 +341,17 @@
 			</div>
 		</section>
 		<!-- Gemini -->
-		<section id="product_showcase"></section>
+		<section id="product_showcase">
+		<div>
+				<div><h2>ultimate face palette</h2>
+					<p>Discover The Iconic Product, Now Reimagined In An Upgraded Formula. Mini Blush Lasts For Up To 16 Hours With A Comfortable,...</p>
+					<a href="#" class="see-more">See More</a></div>
+				<div>
+					
+				</div>
+			</div>
+			<div></div>
+		</section>
 		<!-- Ectho -->
 		<section class="listSliderRow" id="top_rating_2">
 			<div class="titleContainer centeredTitle">
