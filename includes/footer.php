@@ -2,10 +2,20 @@
     <div>
         <h2>Contact</h2>
         <ul>
-            <li><p>Call Phone</p></li>
-            <li><i class="fa-solid fa-phone"></i><a href="#"> (+84) 123 567 712</a></li>
-            <li><p>Mail Us</p></li>
-            <li><i class="fa-regular fa-envelope"></i><a href="#"> Arioshop@Gmail.Com</a></li>
+            <li>
+                <img src="images/icons/phone.svg" alt="" />
+                <p>Call Phone</p>
+            </li>
+            <li>
+                <a href="#"> (+84) 123 567 712</a>
+            </li>
+            <li>
+                <img src="images/icons/mail.svg" alt="" />
+                <p>Mail Us</p>
+            </li>
+            <li>
+                <a href="#"> Arioshop@Gmail.Com</a>
+            </li>
         </ul>
     </div>
     <div>
@@ -28,7 +38,8 @@
             <li><a href="#">Event Sponsorships</a></li>
             <li><a href="#">Vendors</a></li>
             <li><a href="#">Affiliate Program</a></li>
-        </ul></div>
+        </ul>
+    </div>
     <div>
         <h2>Follow Us</h2>
         <ul>
@@ -40,12 +51,20 @@
     </div>
     <div>
         <div>
-            <p>Subscribe to be aware of our regular promotions & exculives offers!</p>
-            <input>
+            <p>
+                Subscribe to be aware of our regular promotions &
+                exclusives offers!
+            </p>
+            <div>
+                <input type="email" placeholder="Your email…" />
+                <button
+                    class="fa-solid fa-sharp fa-arrow-right-long"
+                    type="submit"></button>
+            </div>
         </div>
         <div>
-            <img>
-            <p>Copyright © 2024. All Rights Reserved.</p>
+            <img src="images/logo.png" width="126px" />
+            <p>Copyright &copy; 2024. All Rights Reserved.</p>
         </div>
     </div>
 </footer>
