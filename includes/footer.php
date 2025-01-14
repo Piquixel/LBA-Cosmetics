@@ -1,5 +1,5 @@
 <footer>
-    <div>
+    <div class="footCol">
         <h2>Contact</h2>
         <ul>
             <li>
@@ -18,7 +18,7 @@
             </li>
         </ul>
     </div>
-    <div>
+    <div class="footCol">
         <h2>About Us</h2>
         <ul>
             <li><a href="#">FAQs</a></li>
@@ -29,7 +29,7 @@
             <li><a href="#">Contact Us</a></li>
         </ul>
     </div>
-    <div>
+    <div class="footCol">
         <h2>Corporate</h2>
         <ul>
             <li><a href="#">Careers</a></li>
@@ -40,7 +40,7 @@
             <li><a href="#">Affiliate Program</a></li>
         </ul>
     </div>
-    <div>
+    <div class="footCol">
         <h2>Follow Us</h2>
         <ul>
             <li><a href="#">Twitter</a></li>
@@ -49,20 +49,21 @@
             <li><a href="#">Pinterest</a></li>
         </ul>
     </div>
-    <div>
-        <div>
+    <div class="footCol" id="bottom-row">
+        <div id="mailto">
             <p>
                 Subscribe to be aware of our regular promotions &
                 exclusives offers!
             </p>
-            <div>
+            <div id="mail-input">
                 <input type="email" placeholder="Your email…" />
                 <button
+                    id="mail-submit"
                     class="fa-solid fa-sharp fa-arrow-right-long"
                     type="submit"></button>
             </div>
         </div>
-        <div>
+        <div id="copy">
             <img src="images/logo.png" width="126px" />
             <p>Copyright &copy; 2024. All Rights Reserved.</p>
         </div>

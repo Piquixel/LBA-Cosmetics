@@ -40,7 +40,7 @@
 	<?php include 'includes/header.php' ?>
 	<main>
 		<!-- Ectho -->
-		<section id="home_slider">
+		<section id="banner_slider">
 			<div class="sliderNav">
 				<button
 					class="sliderInteractBtn fa-sharp fa-solid fa-angle-left"></button>
@@ -98,7 +98,7 @@
 				<h2>top rating</h2>
 				<span>Subscribe to be aware of our regular promotions</span>
 			</div>
-			<div class="scrollNav outerScroll">
+			<div class="sliderNav outerScroll">
 				<button
 					class="sliderInteractBtn fa-sharp fa-solid fa-angle-left"></button>
 				<button
@@ -318,7 +318,7 @@
 			<div class="titleContainer">
 				<h2>shop by category</h2>
 			</div>
-			<div class="scrollNav outerScroll">
+			<div class="sliderNav outerScroll">
 				<button
 					class="sliderInteractBtn fa-sharp fa-solid fa-angle-left"></button>
 				<button
@@ -381,7 +381,7 @@
 				<h2>top rating</h2>
 				<span>Subscribe to be aware of our regular promotions</span>
 			</div>
-			<div class="scrollNav">
+			<div class="sliderNav">
 				<button
 					class="sliderInteractBtn fa-sharp fa-solid fa-angle-left"></button>
 				<button
