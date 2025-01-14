@@ -69,3 +69,13 @@
         </div>
     </div>
 </footer>
+<nav id="navbar-mobile-endpage">
+    <a href="#" class="navEl fa-solid fa-border-all"><br /><span>shop</span></a>
+    <a href="#" class="navEl fa-regular fa-user">
+        <br /><span>account</span>
+    </a>
+    <span class="navEl fa-solid fa-magnifying-glass">
+        <br /><span>search</span>
+    </span>
+    <a href="#" class="navEl fa-sharp fa-regular fa-heart"><br /><span>wishlist</span><span class="bubbleNb">0</span></a>
+</nav>

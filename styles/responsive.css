@@ -1,8 +1,6 @@
 @media only screen and (min-width: 1200px) {
-  :root {
-    --cols: 4;
-  }
-  nav#navbar-mobile {
+  .navContainer#navbar-mobile,
+  #navbar-mobile-endpage {
     display: none;
   }
   main {
@@ -14,5 +12,100 @@
   main .listSliderRow .contentList .listSlide .slideEl .card .cardInteract {
     flex-direction: column-reverse;
     align-items: flex-end;
+  }
+  main section .sliderNav:not(.outerScroll) {
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  #navbar-desktop {
+    display: none;
+  }
+  .navContainer .navTopRow {
+    padding: 2rem 2rem 2rem 1rem;
+    align-items: center;
+  }
+  .slideImg {
+    height: 505px;
+  }
+  html body section div.sliderNav {
+    opacity: 1;
+  }
+  html body section div.sliderNav.outerScroll {
+    position: absolute;
+    padding-inline: 0.5rem;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: opacity 300ms ease;
+  }
+  .headList {
+    --cols: 3;
+  }
+  section.listSliderRow .contentList .listSlide .slideEl .card .cartBtn,
+  section.listSliderRow .contentList .listSlide .slideEl .card .cardInteract button.fa-arrows-rotate {
+    display: none;
+  }
+  section.listSliderRow .contentList .listSlide .slideEl .card .cardInteract {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  section.listSliderRow .contentList .listSlide .slideEl .card .cardInteract button {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media only screen and (max-width: 1019px) {
+  :root {
+    --cols: 3;
+  }
+}
+@media only screen and (max-width: 991px) {
+  footer {
+    padding: 5.625rem 0.875rem 0;
+  }
+  footer .footCol:not(#bottom-row) {
+    flex-basis: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  :root {
+    --cols: 2;
+  }
+  .titleContainer {
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  .headList {
+    --cols: 1;
+  }
+  section#products_recommendation {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+  section#products_recommendation .productCard {
+    grid-row: 2/4;
+  }
+  section#products_recommendation .productCard.largeCard {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  footer .footCol:not(#bottom-row) {
+    flex-basis: 100%;
+  }
+  footer .footCol#bottom-row {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  footer .footCol#bottom-row #copy {
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 480px) {
+  :root {
+    --cols: 1;
   }
 }/*# sourceMappingURL=responsive.css.map */

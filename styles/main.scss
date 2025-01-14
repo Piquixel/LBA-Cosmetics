@@ -1,6 +1,10 @@
 // Import des variables et Mixins
 @import 'variables', 'mixins';
 
+:root {
+	--cols: 4;
+}
+
 // Reset général
 * {
 	margin: 0;
@@ -37,7 +41,7 @@ button {
 img {
 	max-width: 100%;
 	max-height: 100%;
-	object-fit: contain;
+	object-fit: cover;
 	object-position: center;
 }
 
@@ -66,9 +70,31 @@ body .shopBtn {
 	}
 }
 
+body .navEl {
+	position: relative;
+
+	.bubbleNb {
+		@include flex($justify: center, $align: center);
+		position: absolute;
+		left: 50%;
+		bottom: 50%;
+		padding-inline: 0.33rem;
+		min-width: 23px;
+		height: 23px;
+		background-color: $accentColor;
+		font: $bubbleFont;
+		color: $white;
+		border-radius: $roundRadius;
+	}
+
+	&:hover {
+		color: $accentColor;
+	}
+}
+
 //Header segment
-#navbar-desktop {
-	#top-row {
+.navContainer {
+	.navTopRow {
 		@include grid(3);
 		padding: 2rem;
 
@@ -92,6 +118,7 @@ body .shopBtn {
 		}
 
 		#logo {
+			display: inline-flex;
 			justify-self: center;
 		}
 
@@ -102,28 +129,6 @@ body .shopBtn {
 
 			span {
 				transition: color $transitionFast;
-			}
-
-			.navEl {
-				position: relative;
-
-				.bubbleNb {
-					@include flex($justify: center, $align: center);
-					position: absolute;
-					left: 50%;
-					bottom: 50%;
-					padding-inline: 0.33rem;
-					min-width: 23px;
-					height: 23px;
-					background-color: $accentColor;
-					font: $bubbleFont;
-					color: $white;
-					border-radius: $roundRadius;
-				}
-
-				&:hover {
-					color: $accentColor;
-				}
 			}
 		}
 	}
@@ -162,13 +167,7 @@ section {
 		pointer-events: none;
 
 		&:not(.outerScroll) {
-			position: absolute;
-			padding-inline: 0.5rem;
-			left: 0;
-			width: 100%;
-			z-index: 10;
-			opacity: 0;
-			transition: opacity $transitionFast;
+			@include innerScroll;
 
 			&:has(+ *:hover),
 			&:has(button:hover) {
@@ -199,9 +198,7 @@ section {
 		margin-bottom: 2.75rem;
 
 		&.centeredTitle {
-			align-items: center;
-			width: 100%;
-			text-align: center;
+			@include centerTitle;
 		}
 
 		h2 {
@@ -218,7 +215,6 @@ section {
 		@include flex($align: center);
 		width: 100%;
 		margin-bottom: 5.125rem;
-		// overflow: hidden;
 
 		.sliderInteractBtn {
 			width: 54px;
@@ -307,7 +303,7 @@ section {
 						position: inherit;
 						aspect-ratio: 1/1;
 						width: 100%;
-						max-width: 315px;
+						// max-width: 315px;
 						border: 1px solid $borderColor;
 						background: no-repeat padding-box var(--thumb-var-1)
 							center/100%;
@@ -439,7 +435,7 @@ section {
 	}
 
 	&#products_recommendation {
-		@include grid(3, $gap: 1rem);
+		@include grid(3, $gap: 1rem, $row-size: minmax(auto, 350px));
 		margin-bottom: 5.625rem;
 
 		.productCard {
@@ -512,8 +508,7 @@ footer {
 		}
 
 		&#bottom-row {
-			@include grid(2);
-			justify-content: space-between;
+			@include flex($justify: space-between);
 			width: 100%;
 			padding-block: 2.5rem;
 			border-top: 1px solid $borderFooterColor;
@@ -567,8 +562,33 @@ footer {
 					$align: flex-end,
 					$row-gap: 28px
 				);
-				justify-self: flex-end;
 			}
+		}
+	}
+}
+
+#navbar-mobile-endpage {
+	@include grid(4);
+	z-index: 10;
+	position: sticky;
+	bottom: 0;
+	padding: 0.5rem 1rem;
+	background-color: $white;
+	box-shadow: 0 1px 12px 2px hsla(0, 0%, 56%, 0.3);
+
+	.navEl {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		font-size: 18px;
+
+		& > span {
+			font-family: $mainFontFam;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 1;
+			text-transform: uppercase;
+			margin-top: 3px;
 		}
 	}
 }

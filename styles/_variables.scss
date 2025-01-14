@@ -1,17 +1,5 @@
 @use 'sass:color';
 
-//$black: #000;
-
-// $titleFont: 300 3.125rem/4rem $fontFamily;
-// $titleFont: 300 var(--title-font-size, 3.125rem) /
-// var(--title-line-height, 4rem) $fontFamily;
-// $secondaryTitleFont: 300 40px $fontFamily;
-
-// $subTitleFont: 300 1.125rem/1.125rem $fontFamily;
-// $subTitleFont: 300 var(--subtitle-font-size, 1.125rem) /
-// var(--subtitle-line-height, 1.125rem) $fontFamily;
-// $interactionFont: 500 0.75rem/3rem $fontFamily;
-
 // Colors
 $white: #fff;
 $black: color.invert($white);

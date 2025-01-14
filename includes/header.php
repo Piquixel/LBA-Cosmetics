@@ -1,6 +1,6 @@
 <header>
-    <nav id="navbar-desktop">
-        <div id="top-row">
+    <nav class="navContainer" id="navbar-desktop">
+        <div class="navTopRow">
             <div id="social-panel">
                 <ul>
                     <li>
@@ -60,22 +60,21 @@
             </ul>
         </div>
     </nav>
-    <nav id="navbar-mobile">
-        <div>
-            <div id="sliding-container"></div>
-            <div>
-                <a href="index.php">
-                    <img src="./images/logo.png" alt="Logo Ario" />
+    <nav class="navContainer" id="navbar-mobile">
+        <div class="navTopRow">
+            <div id="sliding-container">
+                <span class="fa-solid fa-sharp fa-bars"></span>
+            </div>
+            <a href="index.php" id="logo">
+                <img
+                    src="./images/logo.png"
+                    alt="Logo Ario"
+                    width="90px" />
+            </a>
+            <div id="nav-panel">
+                <a class="navEl fa-solid fa-bag-shopping">
+                    <span class="bubbleNb">0</span>
                 </a>
-            </div>
-            <div>
-                <i class="fa-solid fa-bag-shopping"></i>
-            </div>
-            <div id="navbar-mobile-endpage">
-                <a href="#" class="fa-solid fa-border-all"></a>
-                <a href="#" class="fa-regular fa-user"></a>
-                <span class="fa-solid fa-magnifying-glass"></span>
-                <a href="#" class="fa-sharp fa-regular fa-heart"></a>
             </div>
         </div>
     </nav>

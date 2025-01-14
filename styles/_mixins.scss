@@ -13,10 +13,10 @@
 	gap: $row-gap $col-gap;
 }
 
-@mixin grid($cols: 1, $rows: 1, $gap: 0) {
+@mixin grid($cols: 1, $rows: 1, $gap: 0, $col-size: 1fr, $row-size: 1fr) {
 	display: grid;
-	grid-template-columns: repeat($cols, 1fr);
-	grid-template-rows: repeat($rows, 1fr);
+	grid-template-columns: repeat($cols, $col-size);
+	grid-template-rows: repeat($rows, $row-size);
 	gap: $gap;
 }
 
@@ -24,4 +24,19 @@
 	appearance: none;
 	background: unset;
 	border: 0;
+}
+
+@mixin innerScroll {
+	position: absolute;
+	padding-inline: 0.5rem;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	transition: opacity $transitionFast;
+}
+
+@mixin centerTitle {
+	align-items: center;
+	width: 100%;
+	text-align: center;
 }

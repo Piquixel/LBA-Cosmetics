@@ -1,3 +1,7 @@
+:root {
+  --cols: 4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -40,8 +44,8 @@ button {
 img {
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   -o-object-position: center;
      object-position: center;
 }
@@ -67,56 +71,10 @@ body .shopBtn.slimBtn:hover {
   color: #c8605f;
 }
 
-#navbar-desktop #top-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 0;
-  padding: 2rem;
-}
-#navbar-desktop #top-row #social-panel ul {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0 0.75rem;
-}
-#navbar-desktop #top-row #social-panel ul .brandLinks {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0 0;
-  aspect-ratio: 1/1;
-  width: 33px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.04);
-  transition: 300ms ease;
-  transition-property: background, color;
-}
-#navbar-desktop #top-row #social-panel ul .brandLinks:hover {
-  background-color: #c8605f;
-  color: #fff;
-}
-#navbar-desktop #top-row #logo {
-  justify-self: center;
-}
-#navbar-desktop #top-row #nav-panel {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0 1.5rem;
-  font-size: 18px;
-  justify-self: flex-end;
-}
-#navbar-desktop #top-row #nav-panel span {
-  transition: color 300ms ease;
-}
-#navbar-desktop #top-row #nav-panel .navEl {
+body .navEl {
   position: relative;
 }
-#navbar-desktop #top-row #nav-panel .navEl .bubbleNb {
+body .navEl .bubbleNb {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -133,10 +91,58 @@ body .shopBtn.slimBtn:hover {
   color: #fff;
   border-radius: 200px;
 }
-#navbar-desktop #top-row #nav-panel .navEl:hover {
+body .navEl:hover {
   color: #c8605f;
 }
-#navbar-desktop #bottom-row {
+
+.navContainer .navTopRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 0;
+  padding: 2rem;
+}
+.navContainer .navTopRow #social-panel ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0 0.75rem;
+}
+.navContainer .navTopRow #social-panel ul .brandLinks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 0;
+  aspect-ratio: 1/1;
+  width: 33px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.04);
+  transition: 300ms ease;
+  transition-property: background, color;
+}
+.navContainer .navTopRow #social-panel ul .brandLinks:hover {
+  background-color: #c8605f;
+  color: #fff;
+}
+.navContainer .navTopRow #logo {
+  display: inline-flex;
+  justify-self: center;
+}
+.navContainer .navTopRow #nav-panel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 1.5rem;
+  font-size: 18px;
+  justify-self: flex-end;
+}
+.navContainer .navTopRow #nav-panel span {
+  transition: color 300ms ease;
+}
+.navContainer #bottom-row {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -145,7 +151,7 @@ body .shopBtn.slimBtn:hover {
   background-color: #f4dddd;
   padding-block: 0.875rem;
 }
-#navbar-desktop #bottom-row ul {
+.navContainer #bottom-row ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -154,7 +160,7 @@ body .shopBtn.slimBtn:hover {
   text-transform: uppercase;
   font: 500 12px/1.5em "Be Vietnam Pro", sans-serif;
 }
-#navbar-desktop #bottom-row ul #current-page {
+.navContainer #bottom-row ul #current-page {
   color: #c8605f;
 }
 
@@ -177,7 +183,6 @@ section .sliderNav:not(.outerScroll) {
   left: 0;
   width: 100%;
   z-index: 10;
-  opacity: 0;
   transition: opacity 300ms ease;
 }
 section .sliderNav:not(.outerScroll):has(+ *:hover), section .sliderNav:not(.outerScroll):has(button:hover) {
@@ -325,7 +330,6 @@ section.listSliderRow .contentList .listSlide .slideEl .card {
   position: inherit;
   aspect-ratio: 1/1;
   width: 100%;
-  max-width: 315px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: no-repeat padding-box var(--thumb-var-1) center/100%;
   cursor: pointer;
@@ -439,7 +443,7 @@ section.listSliderRow .contentList .listSlide.catSlide .slideEl {
 section#products_recommendation {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: repeat(1, minmax(auto, 350px));
   gap: 1rem;
   margin-bottom: 5.625rem;
 }
@@ -516,11 +520,11 @@ footer .footCol:not(#bottom-row) ul li {
   gap: 0 0.5rem;
 }
 footer .footCol#bottom-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 0;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 0 0;
   width: 100%;
   padding-block: 2.5rem;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -577,5 +581,31 @@ footer .footCol#bottom-row #copy {
   justify-content: center;
   align-items: flex-end;
   gap: 28px 0;
-  justify-self: flex-end;
+}
+
+#navbar-mobile-endpage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 0;
+  z-index: 10;
+  position: sticky;
+  bottom: 0;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  box-shadow: 0 1px 12px 2px hsla(0, 0%, 56%, 0.3);
+}
+#navbar-mobile-endpage .navEl {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+#navbar-mobile-endpage .navEl > span {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 3px;
 }/*# sourceMappingURL=main.css.map */
