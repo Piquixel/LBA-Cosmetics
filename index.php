@@ -256,8 +256,8 @@
 		<!-- Gemini -->
 		<section id="to_shop">
 			<div id="to_shop_container">
-				<div id="to_shop_img"></div>
-				<div id="to_shop_img">
+				<div id="to_shop_img_girl"></div>
+				<div id="to_shop_img_crayon">
 					<p>Makeup & Life Blending</p>
 					<p>FOR FLAWLESS SKIN</p>
 					<a href="#" class="shopBtn">Shop now</a>
