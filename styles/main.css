@@ -58,6 +58,9 @@ body .shopBtn {
   transition: 300ms ease;
   transition-property: background, color;
 }
+body .shopBtn.slimBtn {
+  line-height: 1.5em;
+}
 body .shopBtn:not(.slimBtn) {
   background-color: #fff;
   padding-inline: 3rem;
@@ -98,7 +101,7 @@ body .navEl:hover {
 .navContainer .navTopRow {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: 1fr;
   gap: 0;
   padding: 2rem;
 }
@@ -217,7 +220,7 @@ section .titleContainer.centeredTitle {
   text-align: center;
 }
 section .titleContainer h2 {
-  font: 300 40px/1.2em "Be Vietnam Pro", sans-serif;
+  font: 300 var(--sec-title-size, 2.5rem)/1.2em "Be Vietnam Pro", sans-serif;
   text-transform: uppercase;
 }
 section .titleContainer span {
@@ -277,11 +280,11 @@ section#banner_slider #slider_container article {
           user-select: none;
 }
 section#banner_slider #slider_container article .slideTitle {
-  font: 300 var(--bn-title-font-size, 3.125rem)/var(--bn-title-line-height, 4rem) "Be Vietnam Pro", sans-serif;
+  font: 300 var(--bn-title-size, 3.125rem)/var(--bn-title-height, 4rem) "Be Vietnam Pro", sans-serif;
   text-transform: uppercase;
 }
 section#banner_slider #slider_container article .slideSubTitle {
-  font: 300 var(--bn-subtitle-font-size, 1.125rem)/var(--bn-subtitle-line-height, 1.125rem) "Be Vietnam Pro", sans-serif;
+  font: 300 var(--bn-subtitle-size, 1.125rem)/var(--bn-subtitle-height, var(--bn-subtitle-size, 1.125rem)) "Be Vietnam Pro", sans-serif;
   text-transform: capitalize;
   margin-bottom: 1.875rem;
 }
@@ -442,8 +445,8 @@ section.listSliderRow .contentList .listSlide.catSlide .slideEl {
 }
 section#products_recommendation {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, minmax(auto, 350px));
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
   gap: 1rem;
   margin-bottom: 5.625rem;
 }
@@ -455,7 +458,7 @@ section#products_recommendation .productCard {
   transition: background 1s ease;
 }
 section#products_recommendation .productCard h2 {
-  font: 300 35px/1.2em "Be Vietnam Pro", sans-serif;
+  font: 300 var(--c-title-size, 2.25rem)/1.2em "Be Vietnam Pro", sans-serif;
 }
 section#products_recommendation .productCard > span {
   font: 300 18px/1.5em "Be Vietnam Pro", sans-serif;
@@ -465,21 +468,20 @@ section#products_recommendation .productCard > span {
 section#products_recommendation .productCard:not(.largeCard) {
   aspect-ratio: 1.07/1;
 }
-section#products_recommendation .productCard.largeCard {
+section#products_recommendation .productCard:hover {
+  background-size: auto 110%;
+}
+section#products_recommendation .largeCard {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: flex-start;
   gap: 0 0;
-  grid-column: 1/3;
   padding: 5.625rem 3.125rem;
   color: #fff;
 }
-section#products_recommendation .productCard.largeCard h2 {
+section#products_recommendation .largeCard h2 {
   margin-bottom: 2.375rem;
-}
-section#products_recommendation .productCard:hover {
-  background-size: auto 110%;
 }
 
 footer {
@@ -586,17 +588,21 @@ footer .footCol#bottom-row #copy {
 #navbar-mobile-endpage {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: 1fr;
   gap: 0;
   z-index: 10;
   position: sticky;
   bottom: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   background-color: #fff;
   box-shadow: 0 1px 12px 2px hsla(0, 0%, 56%, 0.3);
 }
 #navbar-mobile-endpage .navEl {
-  display: inline-block;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px 0;
   width: 100%;
   text-align: center;
   font-size: 18px;
@@ -608,4 +614,10 @@ footer .footCol#bottom-row #copy {
   line-height: 1;
   text-transform: uppercase;
   margin-top: 3px;
+}
+#navbar-mobile-endpage .navEl .bubbleNb {
+  left: unset;
+  bottom: unset;
+  top: -25%;
+  right: 25%;
 }/*# sourceMappingURL=main.css.map */

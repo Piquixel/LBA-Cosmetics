@@ -21,21 +21,21 @@ $mainFontFam: 'Be Vietnam Pro', sans-serif;
 $navLinks: 500 12px / 1.5em $mainFontFam;
 $bubbleFont: 500 11px / 11px $mainFontFam;
 
-$bannerTitleFont: 300 var(--bn-title-font-size, 3.125rem) /
-	var(--bn-title-line-height, 4rem) $mainFontFam;
-$bannerSubtitleFont: 300 var(--bn-subtitle-font-size, 1.125rem) /
-	var(--bn-subtitle-line-height, 1.125rem) $mainFontFam;
+$bannerTitleFont: 300 var(--bn-title-size, 3.125rem) /
+	var(--bn-title-height, 4rem) $mainFontFam;
+$bannerSubtitleFont: 300 var(--bn-subtitle-size, 1.125rem) /
+	var(--bn-subtitle-height, var(--bn-subtitle-size, 1.125rem)) $mainFontFam;
 
 $interactionFont: 500 0.75rem / 3rem $mainFontFam;
 
-$sectionTitleFont: 300 40px / 1.2em $mainFontFam;
+$sectionTitleFont: 300 var(--sec-title-size, 2.5rem) / 1.2em $mainFontFam;
 $sectionSubtitleFont: 300 16px / 1.5em $mainFontFam;
 
 $tagFont: 400 10px / 24px $mainFontFam;
 
 $labelFont: 500 14px / 1.2em $mainFontFam;
 
-$cardTitleFont: 300 35px / 1.2em $mainFontFam;
+$cardTitleFont: 300 var(--c-title-size, 2.25rem) / 1.2em $mainFontFam;
 $cardDescFont: 300 18px / 1.5em $mainFontFam;
 
 $footerTitleFont: 400 14px / 1em $mainFontFam;

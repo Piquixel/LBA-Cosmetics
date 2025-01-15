@@ -42,6 +42,10 @@
   .headList {
     --cols: 3;
   }
+  section#banner_slider .sliderInteractBtn {
+    width: 44px;
+    margin-inline: 0.25rem;
+  }
   section.listSliderRow .contentList .listSlide .slideEl .card .cartBtn,
   section.listSliderRow .contentList .listSlide .slideEl .card .cardInteract button.fa-arrows-rotate {
     display: none;
@@ -55,6 +59,21 @@
     opacity: 1;
     transform: none;
   }
+  section .sliderNav .sliderInteractBtn {
+    width: 35px;
+  }
+  section#products_recommendation .productCard {
+    padding: 1rem;
+  }
+  section#products_recommendation .productCard.largeCard {
+    padding: 2rem;
+  }
+  section#products_recommendation .productCard h2 {
+    margin-bottom: 1.25rem;
+  }
+  section#products_recommendation .productCard > span {
+    margin-bottom: 0.5rem;
+  }
 }
 @media only screen and (max-width: 1019px) {
   :root {
@@ -62,6 +81,9 @@
   }
 }
 @media only screen and (max-width: 991px) {
+  :root {
+    --c-title-size: 1.625rem;
+  }
   footer {
     padding: 5.625rem 0.875rem 0;
   }
@@ -69,31 +91,39 @@
     flex-basis: 50%;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   :root {
+    --c-title-size: 1.5rem;
+    --bn-title-size: 1.75rem;
+    --bn-title-height: 2.125rem;
+    --bn-subtitle-size: 0.75rem;
+    --sec-title-size: 2.125rem;
     --cols: 2;
   }
-  .titleContainer {
+  section .titleContainer {
     align-items: center;
     width: 100%;
     text-align: center;
+    margin-bottom: 1.875rem;
   }
-  .headList {
+  section .headList {
     --cols: 1;
   }
+  section#banner_slider #slider_container article .slideSubTitle {
+    margin-bottom: 0.625rem;
+  }
   section#products_recommendation {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr;
   }
   section#products_recommendation .productCard {
-    grid-row: 2/4;
+    padding: 1rem;
   }
-  section#products_recommendation .productCard.largeCard {
-    grid-column: 1;
-    grid-row: 1;
+  section#products_recommendation .productCard h2 {
+    margin-bottom: 0.625rem;
   }
-  footer .footCol:not(#bottom-row) {
-    flex-basis: 100%;
+  section#products_recommendation .productCard > span {
+    margin-bottom: 0;
   }
   footer .footCol#bottom-row {
     flex-direction: column;
@@ -104,8 +134,37 @@
     align-items: center;
   }
 }
+@media only screen and (min-width: 481px) {
+  .footCol span {
+    display: none;
+  }
+}
 @media only screen and (max-width: 480px) {
   :root {
     --cols: 1;
+  }
+  footer {
+    gap: 0;
+  }
+  footer h2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0 0;
+    width: 100%;
+  }
+  footer ul {
+    height: 0;
+    overflow: hidden;
+    transition: 300ms ease;
+    transition-property: height, margin;
+  }
+  footer ul#developed {
+    margin-bottom: 1.5rem;
+  }
+  footer .footCol:not(#bottom-row) {
+    flex-basis: 100%;
+    row-gap: 1.5rem;
   }
 }/*# sourceMappingURL=responsive.css.map */
