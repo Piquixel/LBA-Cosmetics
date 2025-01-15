@@ -1,700 +1,765 @@
 :root {
-  --cols: 4;
+	--cols: 4;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: 0;
 }
 
 ::-moz-selection {
-  background-color: #c8605f;
-  color: #fff;
+	background-color: #c8605f;
+	color: #fff;
 }
 
 ::selection {
-  background-color: #c8605f;
-  color: #fff;
+	background-color: #c8605f;
+	color: #fff;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 300ms ease;
+	color: inherit;
+	text-decoration: none;
+	transition: color 300ms ease;
 }
 a:hover {
-  color: #c8605f;
+	color: #c8605f;
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: unset;
-  border: 0;
-  cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: unset;
+	border: 0;
+	cursor: pointer;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+	max-width: 100%;
+	max-height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
 }
 
 body .shopBtn {
-  display: inline-block;
-  font: 500 0.75rem/3rem "Be Vietnam Pro", sans-serif;
-  color: black;
-  text-transform: uppercase;
-  transition: 300ms ease;
-  transition-property: background, color;
+	display: inline-block;
+	font: 500 0.75rem/3rem 'Be Vietnam Pro', sans-serif;
+	color: black;
+	text-transform: uppercase;
+	transition: 300ms ease;
+	transition-property: background, color;
 }
 body .shopBtn.slimBtn {
-  line-height: 1.5rem;
+	line-height: 1.5rem;
 }
 body .shopBtn:not(.slimBtn) {
-  background-color: #fff;
-  padding-inline: 3rem;
-  border-radius: 200px;
+	background-color: #fff;
+	padding-inline: 3rem;
+	border-radius: 200px;
 }
 body .shopBtn:not(.slimBtn):hover {
-  background-color: #c8605f;
-  color: #fff;
+	background-color: #c8605f;
+	color: #fff;
 }
 body .shopBtn.slimBtn:hover {
-  color: #c8605f;
+	color: #c8605f;
 }
 
 body .navEl {
-  position: relative;
+	position: relative;
 }
 body .navEl .bubbleNb {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0 0;
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-  padding-inline: 0.33rem;
-  min-width: 23px;
-  height: 23px;
-  background-color: #c8605f;
-  font: 500 11px/11px "Be Vietnam Pro", sans-serif;
-  color: #fff;
-  border-radius: 200px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0 0;
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	padding-inline: 0.33rem;
+	min-width: 23px;
+	height: 23px;
+	background-color: #c8605f;
+	font: 500 11px/11px 'Be Vietnam Pro', sans-serif;
+	color: #fff;
+	border-radius: 200px;
 }
 body .navEl:hover {
-  color: #c8605f;
+	color: #c8605f;
 }
 
 .navContainer .navTopRow {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 0;
-  padding: 2rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+	gap: 0;
+	padding: 2rem;
 }
 .navContainer .navTopRow #social-panel ul {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0 0.75rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0 0.75rem;
 }
 .navContainer .navTopRow #social-panel ul .brandLinks {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0 0;
-  aspect-ratio: 1/1;
-  width: 33px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.04);
-  transition: 300ms ease;
-  transition-property: background, color;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0 0;
+	aspect-ratio: 1/1;
+	width: 33px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.04);
+	transition: 300ms ease;
+	transition-property: background, color;
 }
 .navContainer .navTopRow #social-panel ul .brandLinks:hover {
-  background-color: #c8605f;
-  color: #fff;
+	background-color: #c8605f;
+	color: #fff;
 }
 .navContainer .navTopRow #logo {
-  display: inline-flex;
-  justify-self: center;
+	display: inline-flex;
+	justify-self: center;
 }
 .navContainer .navTopRow #nav-panel {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0 1.5rem;
-  font-size: 18px;
-  justify-self: flex-end;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0 1.5rem;
+	font-size: 18px;
+	justify-self: flex-end;
 }
 .navContainer .navTopRow #nav-panel span {
-  transition: color 300ms ease;
+	transition: color 300ms ease;
 }
 .navContainer #bottom-row {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0 0;
-  background-color: #f4dddd;
-  padding-block: 0.875rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0 0;
+	background-color: #f4dddd;
+	padding-block: 0.875rem;
 }
 .navContainer #bottom-row ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0 2.5rem;
-  text-transform: uppercase;
-  font: 500 12px/1.5em "Be Vietnam Pro", sans-serif;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0 2.5rem;
+	text-transform: uppercase;
+	font: 500 12px/1.5em 'Be Vietnam Pro', sans-serif;
 }
 .navContainer #bottom-row ul #current-page {
-  color: #c8605f;
+	color: #c8605f;
 }
 
 section div:has(> .card) .card {
-  background: no-repeat padding-box var(--thumb-var-1) center/100%;
-  transition: background 1s ease;
+	background: no-repeat padding-box var(--thumb-var-1) center/100%;
+	transition: background 1s ease;
 }
-section div:has(> .card):hover .card[style*="--thumb-var-2"] {
-  background-image: var(--thumb-var-2);
+section div:has(> .card):hover .card[style*='--thumb-var-2'] {
+	background-image: var(--thumb-var-2);
 }
-section div:has(> .card):hover .card:not([style*="--thumb-var-2"]) {
-  background-size: 110%;
+section div:has(> .card):hover .card:not([style*='--thumb-var-2']) {
+	background-size: 110%;
 }
 section:not(#banner_slider) {
-  max-width: 1335px;
-  width: 100%;
-  padding-inline: 1rem;
+	max-width: 1335px;
+	width: 100%;
+	padding-inline: 1rem;
 }
 section .sliderNav {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0 0.75rem;
-  pointer-events: none;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0 0.75rem;
+	pointer-events: none;
 }
 section .sliderNav:not(.outerScroll) {
-  position: absolute;
-  padding-inline: 0.5rem;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  transition: opacity 300ms ease;
+	position: absolute;
+	padding-inline: 0.5rem;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	transition: opacity 300ms ease;
 }
-section .sliderNav:not(.outerScroll):has(+ *:hover), section .sliderNav:not(.outerScroll):has(button:hover) {
-  opacity: 1;
+section .sliderNav:not(.outerScroll):has(+ *:hover),
+section .sliderNav:not(.outerScroll):has(button:hover) {
+	opacity: 1;
 }
 section .sliderNav .sliderInteractBtn {
-  position: relative;
-  pointer-events: all;
-  aspect-ratio: 1/1;
-  width: 46px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  transition: 300ms ease;
-  transition-property: background, border, color;
+	position: relative;
+	pointer-events: all;
+	aspect-ratio: 1/1;
+	width: 46px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	transition: 300ms ease;
+	transition-property: background, border, color;
 }
 section .sliderNav .sliderInteractBtn:hover {
-  color: #fff;
-  background-color: black;
-  border-color: black;
+	color: #fff;
+	background-color: black;
+	border-color: black;
 }
 section .titleContainer {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0.875rem 0;
-  margin-bottom: 2.75rem;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0.875rem 0;
+	margin-bottom: 2.75rem;
 }
 section .titleContainer.centeredTitle {
-  align-items: center;
-  width: 100%;
-  text-align: center;
+	align-items: center;
+	width: 100%;
+	text-align: center;
 }
 section .titleContainer h2 {
-  font: 300 var(--sec-title-size, 2.5rem)/1.2em "Be Vietnam Pro", sans-serif;
-  text-transform: uppercase;
+	font: 300 var(--sec-title-size, 2.5rem) / 1.2em 'Be Vietnam Pro', sans-serif;
+	text-transform: uppercase;
 }
 section .titleContainer span {
-  font: 300 16px/1.5em "Be Vietnam Pro", sans-serif;
+	font: 300 16px/1.5em 'Be Vietnam Pro', sans-serif;
 }
 section#banner_slider {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0 0;
-  width: 100%;
-  margin-bottom: 5.125rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0 0;
+	width: 100%;
+	margin-bottom: 5.125rem;
 }
 section#banner_slider .sliderInteractBtn {
-  width: 54px;
-  border-color: #fff;
-  color: #fff;
-  margin-inline: 1rem;
+	width: 54px;
+	border-color: #fff;
+	color: #fff;
+	margin-inline: 1rem;
 }
 section#banner_slider .sliderInteractBtn:hover {
-  background-color: #c8605f;
-  border-color: transparent;
+	background-color: #c8605f;
+	border-color: transparent;
 }
 section#banner_slider #slider_container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0 0;
-  width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 0 0;
+	width: 100%;
 }
 section#banner_slider #slider_container .sliderSlides {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0 0;
-  width: 100%;
-  overflow: hidden;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0 0;
+	width: 100%;
+	overflow: hidden;
 }
 section#banner_slider #slider_container .sliderSlides:not(#slide_1) {
-  position: absolute;
-  left: 0;
+	position: absolute;
+	left: 0;
 }
 section#banner_slider #slider_container article {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem 0;
-  position: absolute;
-  color: #fff;
-  text-align: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem 0;
+	position: absolute;
+	color: #fff;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 section#banner_slider #slider_container article .slideTitle {
-  font: 300 var(--bn-title-size, 3.125rem)/var(--bn-title-height, 4rem) "Be Vietnam Pro", sans-serif;
-  text-transform: uppercase;
+	font: 300 var(--bn-title-size, 3.125rem) / var(--bn-title-height, 4rem)
+			'Be Vietnam Pro',
+		sans-serif;
+	text-transform: uppercase;
 }
 section#banner_slider #slider_container article .slideSubTitle {
-  font: 300 var(--bn-subtitle-size, 1.125rem)/var(--bn-subtitle-height, var(--bn-subtitle-size, 1.125rem)) "Be Vietnam Pro", sans-serif;
-  text-transform: capitalize;
-  margin-bottom: 1.875rem;
+	font: 300 var(--bn-subtitle-size, 1.125rem) /
+			var(--bn-subtitle-height, var(--bn-subtitle-size, 1.125rem))
+			'Be Vietnam Pro',
+		sans-serif;
+	text-transform: capitalize;
+	margin-bottom: 1.875rem;
 }
 section#banner_slider #slider_container .slideImg {
-  width: 100%;
+	width: 100%;
 }
 section #to_shop_container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0 0;
-  margin-bottom: 85px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 0 0;
+	margin-bottom: 85px;
 }
 section #to_shop_container > div {
-  width: 100%;
-  flex: 0 0 50%;
+	width: 100%;
+	flex: 0 0 50%;
 }
 section #to_shop_container > div > div {
-  aspect-ratio: 1/1;
-  width: 100%;
+	aspect-ratio: 1/1;
+	width: 100%;
 }
 section #to_shop_container > div > div#to_shop_img_crayon {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0 0;
-  text-transform: capitalize;
-  color: #fff;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0 0;
+	text-transform: capitalize;
+	color: #fff;
 }
 section #to_shop_container > div > div#to_shop_img_crayon p {
-  font: 300 1.125rem/1.5em "Be Vietnam Pro", sans-serif;
-  text-transform: capitalize;
-  margin-bottom: 20px;
+	font: 300 1.125rem/1.5em 'Be Vietnam Pro', sans-serif;
+	text-transform: capitalize;
+	margin-bottom: 20px;
 }
 section #to_shop_container > div > div#to_shop_img_crayon h2 {
-  font: 300 var(--c-title-size, 2.25rem)/1.2em "Be Vietnam Pro", sans-serif;
-  text-transform: uppercase;
-  margin-bottom: 42px;
+	font: 300 var(--c-title-size, 2.25rem) / 1.2em 'Be Vietnam Pro', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 42px;
 }
 section #help_container_content {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px 0;
-  position: relative;
-  padding-bottom: 83px;
-  margin-bottom: 86px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px 0;
+	position: relative;
+	padding-bottom: 83px;
+	margin-bottom: 86px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 section #help_container_content .help_container_vignette {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0 0;
-  text-align: center;
-  height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0 0;
+	text-align: center;
+	height: 100%;
 }
 section #help_container_content .help_container_vignette img {
-  aspect-ratio: 1/1;
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 80px;
-  margin-bottom: 38px;
+	aspect-ratio: 1/1;
+	-o-object-fit: contain;
+	object-fit: contain;
+	height: 80px;
+	margin-bottom: 38px;
 }
 section #help_container_content .help_container_vignette h2 {
-  font: 500 1.25rem/1.2em "Be Vietnam Pro", sans-serif;
-  margin-bottom: 23px;
-  text-transform: uppercase;
+	font: 500 1.25rem/1.2em 'Be Vietnam Pro', sans-serif;
+	margin-bottom: 23px;
+	text-transform: uppercase;
 }
 section #help_container_content .help_container_vignette p {
-  font: 300 1rem/1.625rem "Be Vietnam Pro", sans-serif;
+	font: 300 1rem/1.625rem 'Be Vietnam Pro', sans-serif;
 }
 section.listSliderRow {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0 0;
-  position: relative;
-  margin-bottom: 2.5rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0 0;
+	position: relative;
+	margin-bottom: 2.5rem;
 }
 section.listSliderRow .contentList {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0 0;
-  position: relative;
-  width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0 0;
+	position: relative;
+	width: 100%;
 }
 section.listSliderRow .contentList .listSlide {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0 1rem;
-  position: inherit;
-  width: 100%;
-  overflow: hidden;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0 1rem;
+	position: inherit;
+	width: 100%;
+	overflow: hidden;
 }
 section.listSliderRow .contentList .listSlide .slideEl {
-  position: inherit;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem 0;
-  flex: 0 0 calc(100% / var(--cols) - 1rem / var(--cols) * (var(--cols) - 1));
-  margin-bottom: 2.5rem;
+	position: inherit;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem 0;
+	flex: 0 0 calc(100% / var(--cols) - 1rem / var(--cols) * (var(--cols) - 1));
+	margin-bottom: 2.5rem;
 }
 section.listSliderRow .contentList .listSlide .slideEl .card {
-  position: inherit;
-  aspect-ratio: 1/1;
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  overflow: hidden;
+	position: inherit;
+	aspect-ratio: 1/1;
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	overflow: hidden;
 }
 section.listSliderRow .contentList .listSlide .slideEl .card .cardTags {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0 0;
-  pointer-events: none;
-  width: 100%;
-  padding: 0.8rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 0 0;
+	pointer-events: none;
+	width: 100%;
+	padding: 0.8rem;
 }
-section.listSliderRow .contentList .listSlide .slideEl .card .cardTags .productTag {
-  font: 400 10px/24px "Be Vietnam Pro", sans-serif;
-  color: #fff;
-  text-transform: uppercase;
-  border-radius: 200px;
-  padding-inline: 0.875rem;
+section.listSliderRow
+	.contentList
+	.listSlide
+	.slideEl
+	.card
+	.cardTags
+	.productTag {
+	font: 400 10px/24px 'Be Vietnam Pro', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 200px;
+	padding-inline: 0.875rem;
 }
-section.listSliderRow .contentList .listSlide .slideEl .card .cardTags .productTag.tagHot {
-  background-color: #78dce2;
+section.listSliderRow
+	.contentList
+	.listSlide
+	.slideEl
+	.card
+	.cardTags
+	.productTag.tagHot {
+	background-color: #78dce2;
 }
-section.listSliderRow .contentList .listSlide .slideEl .card .cardTags .productTag.tagSale {
-  background-color: #c8605f;
+section.listSliderRow
+	.contentList
+	.listSlide
+	.slideEl
+	.card
+	.cardTags
+	.productTag.tagSale {
+	background-color: #c8605f;
 }
-section.listSliderRow .contentList .listSlide .slideEl .card .cardTags:has(.tagSale:only-child) {
-  justify-content: flex-end;
+section.listSliderRow
+	.contentList
+	.listSlide
+	.slideEl
+	.card
+	.cardTags:has(.tagSale:only-child) {
+	justify-content: flex-end;
 }
 section.listSliderRow .contentList .listSlide .slideEl .card .cardInteract {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem 0;
-  padding: 1rem;
-  z-index: 1;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0.5rem 0;
+	padding: 1rem;
+	z-index: 1;
 }
-section.listSliderRow .contentList .listSlide .slideEl .card .cardInteract button {
-  aspect-ratio: 1/1;
-  width: 35px;
-  background-color: #fff;
-  border-radius: 50%;
-  opacity: 0;
-  transform: translateX(2rem);
-  transition: 300ms ease;
-  transition-property: color, opacity, transform;
+section.listSliderRow
+	.contentList
+	.listSlide
+	.slideEl
+	.card
+	.cardInteract
+	button {
+	aspect-ratio: 1/1;
+	width: 35px;
+	background-color: #fff;
+	border-radius: 50%;
+	opacity: 0;
+	transform: translateX(2rem);
+	transition: 300ms ease;
+	transition-property: color, opacity, transform;
 }
-section.listSliderRow .contentList .listSlide .slideEl .card .cardInteract button:nth-child(2) {
-  transition-delay: 100ms;
+section.listSliderRow
+	.contentList
+	.listSlide
+	.slideEl
+	.card
+	.cardInteract
+	button:nth-child(2) {
+	transition-delay: 100ms;
 }
-section.listSliderRow .contentList .listSlide .slideEl .card .cardInteract button:first-child {
-  transition-delay: 200ms;
+section.listSliderRow
+	.contentList
+	.listSlide
+	.slideEl
+	.card
+	.cardInteract
+	button:first-child {
+	transition-delay: 200ms;
 }
-section.listSliderRow .contentList .listSlide .slideEl .card .cardInteract button:hover {
-  color: #c8605f;
+section.listSliderRow
+	.contentList
+	.listSlide
+	.slideEl
+	.card
+	.cardInteract
+	button:hover {
+	color: #c8605f;
 }
 section.listSliderRow .contentList .listSlide .slideEl .card .cartBtn {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin: 1rem;
-  width: calc(100% - 2rem);
-  background-color: #fff;
-  border: 1px dashed rgba(0, 0, 0, 0.1);
-  border-radius: 200px;
-  opacity: 0;
-  font: 500 0.75rem/3rem "Be Vietnam Pro", sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  transform: translateY(100%);
-  transition: 300ms ease;
-  transition-property: background, border, color, opacity, transform;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin: 1rem;
+	width: calc(100% - 2rem);
+	background-color: #fff;
+	border: 1px dashed rgba(0, 0, 0, 0.1);
+	border-radius: 200px;
+	opacity: 0;
+	font: 500 0.75rem/3rem 'Be Vietnam Pro', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	transform: translateY(100%);
+	transition: 300ms ease;
+	transition-property: background, border, color, opacity, transform;
 }
 section.listSliderRow .contentList .listSlide .slideEl .card .cartBtn:hover {
-  background-color: #c8605f;
-  color: #fff;
-  border-color: transparent;
+	background-color: #c8605f;
+	color: #fff;
+	border-color: transparent;
 }
 section.listSliderRow .contentList .listSlide .slideEl:hover .card .cartBtn {
-  opacity: 1;
-  transform: translateY(0);
+	opacity: 1;
+	transform: translateY(0);
 }
-section.listSliderRow .contentList .listSlide .slideEl:hover .card .cardInteract > button {
-  transform: translateX(0);
-  opacity: 1;
+section.listSliderRow
+	.contentList
+	.listSlide
+	.slideEl:hover
+	.card
+	.cardInteract
+	> button {
+	transform: translateX(0);
+	opacity: 1;
 }
 section.listSliderRow .contentList .listSlide .cardDetails {
-  text-align: center;
-  font: 500 14px/1.2em "Be Vietnam Pro", sans-serif;
+	text-align: center;
+	font: 500 14px/1.2em 'Be Vietnam Pro', sans-serif;
 }
 section.listSliderRow .contentList .listSlide .cardDetails h3 {
-  font-weight: inherit;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
+	font-weight: inherit;
+	text-transform: uppercase;
+	margin-bottom: 0.75rem;
 }
 section.listSliderRow .contentList .listSlide.catSlide .slideEl {
-  align-items: flex-start;
+	align-items: flex-start;
 }
 section#products_recommendation {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 1rem;
-  margin-bottom: 5.625rem;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 1rem;
+	margin-bottom: 5.625rem;
 }
 section#products_recommendation .productCard {
-  position: relative;
-  padding: 2.375rem;
-  background: no-repeat var(--thumb-var-1) center/auto 100%;
-  text-transform: uppercase;
-  transition: background 1s ease;
+	position: relative;
+	padding: 2.375rem;
+	background: no-repeat var(--thumb-var-1) center/auto 100%;
+	text-transform: uppercase;
+	transition: background 1s ease;
 }
 section#products_recommendation .productCard h2 {
-  font: 300 var(--c-title-size, 2.25rem)/1.2em "Be Vietnam Pro", sans-serif;
+	font: 300 var(--c-title-size, 2.25rem) / 1.2em 'Be Vietnam Pro', sans-serif;
 }
 section#products_recommendation .productCard > span {
-  font: 300 1.125rem/1.5em "Be Vietnam Pro", sans-serif;
-  text-transform: capitalize;
-  margin-bottom: 1rem;
+	font: 300 1.125rem/1.5em 'Be Vietnam Pro', sans-serif;
+	text-transform: capitalize;
+	margin-bottom: 1rem;
 }
 section#products_recommendation .productCard:not(.largeCard) {
-  aspect-ratio: 1.07/1;
+	aspect-ratio: 1.07/1;
 }
 section#products_recommendation .productCard:hover {
-  background-size: auto 110%;
+	background-size: auto 110%;
 }
 section#products_recommendation .largeCard {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end;
-  align-items: flex-start;
-  gap: 0 0;
-  padding: 5.625rem 3.125rem;
-  color: #fff;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-end;
+	align-items: flex-start;
+	gap: 0 0;
+	padding: 5.625rem 3.125rem;
+	color: #fff;
 }
 section#products_recommendation .largeCard h2 {
-  margin-bottom: 2.375rem;
+	margin-bottom: 2.375rem;
 }
 
 #help-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 footer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 4rem 0;
-  padding: 5.625rem 1.875rem 0;
-  background-color: #f7f7f7;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 4rem 0;
+	padding: 5.625rem 1.875rem 0;
+	background-color: #f7f7f7;
 }
 footer .footCol:not(#bottom-row) {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem 0;
-  flex: 0 0 25%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 2rem 0;
+	flex: 0 0 25%;
 }
 footer .footCol:not(#bottom-row) h2 {
-  text-transform: uppercase;
-  font: 400 14px/1em "Be Vietnam Pro", sans-serif;
+	text-transform: uppercase;
+	font: 400 14px/1em 'Be Vietnam Pro', sans-serif;
 }
 footer .footCol:not(#bottom-row) ul {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0.75rem 0;
-  font: 300 14px/1.5em "Be Vietnam Pro", sans-serif;
-  text-transform: capitalize;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0.75rem 0;
+	font: 300 14px/1.5em 'Be Vietnam Pro', sans-serif;
+	text-transform: capitalize;
 }
 footer .footCol:not(#bottom-row) ul li {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0 0.5rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0 0.5rem;
 }
 footer .footCol#bottom-row {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0 0;
-  width: 100%;
-  padding-block: 2.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 0 0;
+	width: 100%;
+	padding-block: 2.5rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 footer .footCol#bottom-row > div {
-  font: 300 14px/24px "Be Vietnam Pro", sans-serif;
+	font: 300 14px/24px 'Be Vietnam Pro', sans-serif;
 }
 footer .footCol#bottom-row #mailto {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem 0;
-  max-width: 368px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 1rem 0;
+	max-width: 368px;
 }
 footer .footCol#bottom-row #mailto #mail-input {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0 0;
-  width: 100%;
-  border-bottom: 1px solid black;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0 0;
+	width: 100%;
+	border-bottom: 1px solid black;
 }
 footer .footCol#bottom-row #mailto #mail-input input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: unset;
-  border: 0;
-  padding-left: 1rem;
-  height: 42px;
-  font: 300 14px/19px "Be Vietnam Pro", sans-serif;
-  width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: unset;
+	border: 0;
+	padding-left: 1rem;
+	height: 42px;
+	font: 300 14px/19px 'Be Vietnam Pro', sans-serif;
+	width: 100%;
 }
 footer .footCol#bottom-row #mailto #mail-input input::-moz-placeholder {
-  color: inherit;
+	color: inherit;
 }
 footer .footCol#bottom-row #mailto #mail-input input::placeholder {
-  color: inherit;
+	color: inherit;
 }
 footer .footCol#bottom-row #mailto #mail-input #mail-submit {
-  padding-inline: 0.25rem;
-  font-size: 1.125rem;
-  line-height: 1.5em;
-  transition: color 300ms ease;
+	padding-inline: 0.25rem;
+	font-size: 1.125rem;
+	line-height: 1.5em;
+	transition: color 300ms ease;
 }
 footer .footCol#bottom-row #mailto #mail-input #mail-submit:hover {
-  color: #c8605f;
+	color: #c8605f;
 }
 footer .footCol#bottom-row #copy {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 28px 0;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 28px 0;
 }
 
 #navbar-mobile-endpage {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-  gap: 0;
-  z-index: 10;
-  position: sticky;
-  bottom: 0;
-  padding: 0.75rem 1rem;
-  background-color: #fff;
-  box-shadow: 0 1px 12px 2px hsla(0, 0%, 56%, 0.3);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+	gap: 0;
+	z-index: 10;
+	position: sticky;
+	bottom: 0;
+	padding: 0.75rem 1rem;
+	background-color: #fff;
+	box-shadow: 0 1px 12px 2px hsla(0, 0%, 56%, 0.3);
 }
 #navbar-mobile-endpage .navEl {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 4px 0;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 4px 0;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
 }
 #navbar-mobile-endpage .navEl > span {
-  font-family: "Be Vietnam Pro", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1;
-  text-transform: uppercase;
-  margin-top: 3px;
+	font-family: 'Be Vietnam Pro', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1;
+	text-transform: uppercase;
+	margin-top: 3px;
 }
 #navbar-mobile-endpage .navEl .bubbleNb {
-  left: unset;
-  bottom: unset;
-  top: -25%;
-  right: 25%;
-}/*# sourceMappingURL=main.css.map */
+	left: unset;
+	bottom: unset;
+	top: -25%;
+	right: 25%;
+} /*# sourceMappingURL=main.css.map */
+#navbar-mobile-endpage .navEl .bubbleNb {
+	left: unset;
+	bottom: unset;
+	top: -25%;
+	right: 25%;
+} /*# sourceMappingURL=main.css.map */
