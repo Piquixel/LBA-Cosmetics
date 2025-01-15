@@ -112,6 +112,18 @@
   section#banner_slider #slider_container article .slideSubTitle {
     margin-bottom: 0.625rem;
   }
+  section #to_shop_container > div {
+    flex-basis: 100%;
+  }
+  section #help_container_content {
+    flex-direction: column;
+  }
+  section #help_container_content .help_container_vignette h2 {
+    margin-bottom: 5px;
+  }
+  section #help_container_content .help_container_vignette img {
+    margin-bottom: 13px;
+  }
   section#products_recommendation {
     grid-template-columns: 100%;
     grid-template-rows: 1fr 2fr;

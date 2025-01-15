@@ -36,7 +36,7 @@ $tagFont: 400 10px / 24px $mainFontFam;
 $labelFont: 500 14px / 1.2em $mainFontFam;
 
 $cardTitleFont: 300 var(--c-title-size, 2.25rem) / 1.2em $mainFontFam;
-$cardDescFont: 300 18px / 1.5em $mainFontFam;
+$cardDescFont: 300 1.125rem / 1.5em $mainFontFam;
 
 $footerTitleFont: 400 14px / 1em $mainFontFam;
 $linkFont: 300 14px / 1.5em $mainFontFam;
@@ -44,6 +44,9 @@ $linkFont: 300 14px / 1.5em $mainFontFam;
 $inputFont: 300 14px / 19px $mainFontFam;
 
 $footerNotes: 300 14px / 24px $mainFontFam;
+
+$helpTitleFont: 500 1.25rem / 1.2em $mainFontFam;
+$helpTextFont: 300 1rem / 1.625rem $mainFontFam;
 
 // Other
 $roundRadius: 200px;

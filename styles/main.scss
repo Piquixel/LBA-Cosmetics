@@ -1,598 +1,683 @@
 // Import des variables et Mixins
-@import "variables", "mixins";
+@import 'variables', 'mixins';
 
 :root {
-  --cols: 4;
+	--cols: 4;
 }
 
 // Reset général
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: 0;
 }
 
 // Colorisation de la sélection de texte
 ::selection {
-  background-color: $accentColor;
-  color: $white;
+	background-color: $accentColor;
+	color: $white;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
-  transition: color $transitionFast;
+	color: inherit;
+	text-decoration: none;
+	transition: color $transitionFast;
 
-  &:hover {
-    color: $accentColor;
-  }
+	&:hover {
+		color: $accentColor;
+	}
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 button {
-  @include inputReset;
-  cursor: pointer;
+	@include inputReset;
+	cursor: pointer;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  object-position: center;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 
 // Bouton Shop
 body .shopBtn {
-  display: inline-block;
-  font: $interactionFont;
-  color: $black;
-  text-transform: uppercase;
-  transition: $transitionFast;
-  transition-property: background, color;
+	display: inline-block;
+	font: $interactionFont;
+	color: $black;
+	text-transform: uppercase;
+	transition: $transitionFast;
+	transition-property: background, color;
 
-  &:not(.slimBtn) {
-    background-color: $white;
-    padding-inline: 3rem;
-    border-radius: $roundRadius;
+	&.slimBtn {
+		line-height: 1.5rem;
+	}
 
-    &:hover {
-      background-color: $accentColor;
-      color: $white;
-    }
-  }
+	&:not(.slimBtn) {
+		background-color: $white;
+		padding-inline: 3rem;
+		border-radius: $roundRadius;
 
-  &.slimBtn:hover {
-    color: $accentColor;
-  }
+		&:hover {
+			background-color: $accentColor;
+			color: $white;
+		}
+	}
+
+	&.slimBtn:hover {
+		color: $accentColor;
+	}
 }
 
 body .navEl {
-  position: relative;
+	position: relative;
 
-  .bubbleNb {
-    @include flex($justify: center, $align: center);
-    position: absolute;
-    left: 50%;
-    bottom: 50%;
-    padding-inline: 0.33rem;
-    min-width: 23px;
-    height: 23px;
-    background-color: $accentColor;
-    font: $bubbleFont;
-    color: $white;
-    border-radius: $roundRadius;
-  }
+	.bubbleNb {
+		@include flex($justify: center, $align: center);
+		position: absolute;
+		left: 50%;
+		bottom: 50%;
+		padding-inline: 0.33rem;
+		min-width: 23px;
+		height: 23px;
+		background-color: $accentColor;
+		font: $bubbleFont;
+		color: $white;
+		border-radius: $roundRadius;
+	}
 
-  &:hover {
-    color: $accentColor;
-  }
+	&:hover {
+		color: $accentColor;
+	}
 }
 
 //Header segment
 .navContainer {
-  .navTopRow {
-    @include grid(3);
-    padding: 2rem;
+	.navTopRow {
+		@include grid(repeat(3, 1fr));
+		padding: 2rem;
 
-    #social-panel ul {
-      @include flex($wrap: nowrap, $col-gap: 0.75rem);
+		#social-panel ul {
+			@include flex($wrap: nowrap, $col-gap: 0.75rem);
 
-      .brandLinks {
-        @include flex($justify: center, $align: center);
-        aspect-ratio: 1/1;
-        width: 33px;
-        border-radius: 50%;
-        background-color: $brandBackground;
-        transition: $transitionFast;
-        transition-property: background, color;
+			.brandLinks {
+				@include flex($justify: center, $align: center);
+				aspect-ratio: 1/1;
+				width: 33px;
+				border-radius: 50%;
+				background-color: $brandBackground;
+				transition: $transitionFast;
+				transition-property: background, color;
 
-        &:hover {
-          background-color: $accentColor;
-          color: $white;
-        }
-      }
-    }
+				&:hover {
+					background-color: $accentColor;
+					color: $white;
+				}
+			}
+		}
 
-    #logo {
-      display: inline-flex;
-      justify-self: center;
-    }
+		#logo {
+			display: inline-flex;
+			justify-self: center;
+		}
 
-    #nav-panel {
-      @include flex($wrap: nowrap, $align: center, $col-gap: 1.5rem);
-      font-size: 18px;
-      justify-self: flex-end;
+		#nav-panel {
+			@include flex($wrap: nowrap, $align: center, $col-gap: 1.5rem);
+			font-size: 18px;
+			justify-self: flex-end;
 
-      span {
-        transition: color $transitionFast;
-      }
-    }
-  }
+			span {
+				transition: color $transitionFast;
+			}
+		}
+	}
 
-  #bottom-row {
-    @include flex($wrap: nowrap, $justify: center, $align: center);
-    background-color: $navRibbon;
-    padding-block: 0.875rem;
+	#bottom-row {
+		@include flex($wrap: nowrap, $justify: center, $align: center);
+		background-color: $navRibbon;
+		padding-block: 0.875rem;
 
-    ul {
-      @include flex($col-gap: 2.5rem);
-      text-transform: uppercase;
-      font: $navLinks;
+		ul {
+			@include flex($col-gap: 2.5rem);
+			text-transform: uppercase;
+			font: $navLinks;
 
-      #current-page {
-        color: $accentColor;
-      }
-    }
-  }
+			#current-page {
+				color: $accentColor;
+			}
+		}
+	}
 }
 
 section {
-  &:not(#banner_slider) {
-    max-width: 1335px;
-    width: 100%;
-    padding-inline: 1rem;
-  }
+	div:has(> .card) {
+		.card {
+			background: no-repeat padding-box var(--thumb-var-1) center/100%;
+			transition: background $transitionSlow;
+		}
 
-  .sliderNav {
-    @include flex(
-      $wrap: nowrap,
-      $justify: space-between,
-      $align: center,
-      $col-gap: 0.75rem
-    );
-    pointer-events: none;
+		&:hover .card {
+			&[style*='--thumb-var-2'] {
+				background-image: var(--thumb-var-2);
+			}
 
-    &:not(.outerScroll) {
-      @include innerScroll;
+			&:not([style*='--thumb-var-2']) {
+				background-size: 110%;
+			}
+		}
+	}
 
-      &:has(+ *:hover),
-      &:has(button:hover) {
-        opacity: 1;
-      }
-    }
+	&:not(#banner_slider) {
+		max-width: 1335px;
+		width: 100%;
+		padding-inline: 1rem;
+	}
 
-    .sliderInteractBtn {
-      position: relative;
-      pointer-events: all;
-      aspect-ratio: 1/1;
-      width: 46px;
-      border: 1px solid $borderColor;
-      border-radius: 50%;
-      transition: $transitionFast;
-      transition-property: background, border, color;
+	.sliderNav {
+		@include flex(
+			$wrap: nowrap,
+			$justify: space-between,
+			$align: center,
+			$col-gap: 0.75rem
+		);
+		pointer-events: none;
 
-      &:hover {
-        color: $white;
-        background-color: $black;
-        border-color: $black;
-      }
-    }
-  }
+		&:not(.outerScroll) {
+			@include innerScroll;
 
-  .titleContainer {
-    @include flex(column, $row-gap: 0.875rem);
-    margin-bottom: 2.75rem;
+			&:has(+ *:hover),
+			&:has(button:hover) {
+				opacity: 1;
+			}
+		}
 
-    &.centeredTitle {
-      @include centerTitle;
-    }
+		.sliderInteractBtn {
+			position: relative;
+			pointer-events: all;
+			aspect-ratio: 1/1;
+			width: 46px;
+			border: 1px solid $borderColor;
+			border-radius: 50%;
+			transition: $transitionFast;
+			transition-property: background, border, color;
 
-    h2 {
-      font: $sectionTitleFont;
-      text-transform: uppercase;
-    }
+			&:hover {
+				color: $white;
+				background-color: $black;
+				border-color: $black;
+			}
+		}
+	}
 
-    span {
-      font: $sectionSubtitleFont;
-    }
-  }
+	.titleContainer {
+		@include flex(column, $row-gap: 0.875rem);
+		margin-bottom: 2.75rem;
 
-  &#banner_slider {
-    @include flex($align: center);
-    width: 100%;
-    margin-bottom: 5.125rem;
+		&.centeredTitle {
+			@include centerTitle;
+		}
 
-    .sliderInteractBtn {
-      width: 54px;
-      border-color: $white;
-      color: $white;
-      margin-inline: 1rem;
+		h2 {
+			font: $sectionTitleFont;
+			text-transform: uppercase;
+		}
 
-      &:hover {
-        background-color: $accentColor;
-        border-color: transparent;
-      }
-    }
+		span {
+			font: $sectionSubtitleFont;
+		}
+	}
 
-    #slider_container {
-      @include flex($justify: center);
-      width: 100%;
+	&#banner_slider {
+		@include flex($align: center);
+		width: 100%;
+		margin-bottom: 5.125rem;
 
-      .sliderSlides {
-        @include flex($justify: center, $align: center);
-        width: 100%;
-        overflow: hidden;
+		.sliderInteractBtn {
+			width: 54px;
+			border-color: $white;
+			color: $white;
+			margin-inline: 1rem;
 
-        &:not(#slide_1) {
-          position: absolute;
-          left: 0;
-        }
-      }
+			&:hover {
+				background-color: $accentColor;
+				border-color: transparent;
+			}
+		}
 
-      article {
-        @include flex(column, nowrap, center, center, 1rem);
-        position: absolute;
-        color: $white;
-        text-align: center;
-        user-select: none;
+		#slider_container {
+			@include flex($justify: center);
+			width: 100%;
 
-        .slideTitle {
-          font: $bannerTitleFont;
-          text-transform: uppercase;
-        }
+			.sliderSlides {
+				@include flex($justify: center, $align: center);
+				width: 100%;
+				overflow: hidden;
 
-        .slideSubTitle {
-          font: $bannerSubtitleFont;
-          text-transform: capitalize;
-          margin-bottom: 1.875rem;
-        }
-      }
+				&:not(#slide_1) {
+					position: absolute;
+					left: 0;
+				}
+			}
 
-      .slideImg {
-        width: 100%;
-      }
-    }
-  }
+			article {
+				@include flex(column, nowrap, center, center, 1rem);
+				position: absolute;
+				color: $white;
+				text-align: center;
+				user-select: none;
 
-  &.listSliderRow {
-    @include flex($justify: space-between, $align: center);
-    position: relative;
-    margin-bottom: 2.5rem;
+				.slideTitle {
+					font: $bannerTitleFont;
+					text-transform: uppercase;
+				}
 
-    .contentList {
-      @include flex($align: center);
-      position: relative;
-      width: 100%;
+				.slideSubTitle {
+					font: $bannerSubtitleFont;
+					text-transform: capitalize;
+					margin-bottom: 1.875rem;
+				}
+			}
 
-      .listSlide {
-        @include flex($wrap: nowrap, $col-gap: 1rem);
-        position: inherit;
-        width: 100%;
-        overflow: hidden;
+			.slideImg {
+				width: 100%;
+			}
+		}
+	}
 
-        .slideEl {
-          position: inherit;
-          @include flex(column, nowrap, $align: center, $row-gap: 1rem);
-          flex: 0 0
-            calc(100% / var(--cols) - 1rem / var(--cols) * (var(--cols) - 1));
-          margin-bottom: 2.5rem;
+	#to_shop_container {
+		@include flex($justify: center);
+		margin-bottom: 85px;
 
-          .card {
-            position: inherit;
-            aspect-ratio: 1/1;
-            width: 100%;
-            // max-width: 315px;
-            border: 1px solid $borderColor;
-            background: no-repeat padding-box var(--thumb-var-1) center/100%;
-            cursor: pointer;
-            overflow: hidden;
-            transition: background $transitionSlow;
+		& > div {
+			width: 100%;
+			flex: 0 0 50%;
 
-            .cardTags {
-              @include flex($justify: space-between);
-              pointer-events: none;
-              width: 100%;
-              padding: 0.8rem;
+			& > div {
+				aspect-ratio: 1/1;
+				width: 100%;
 
-              .productTag {
-                font: $tagFont;
-                color: $white;
-                text-transform: uppercase;
-                border-radius: $roundRadius;
-                padding-inline: 0.875rem;
+				&#to_shop_img_crayon {
+					@include flex(column, nowrap, center, center);
+					text-transform: capitalize;
+					color: $white;
 
-                &.tagHot {
-                  background-color: $tiffanyBlue;
-                }
+					p {
+						font: $cardDescFont;
+						text-transform: capitalize;
+						margin-bottom: 20px;
+					}
 
-                &.tagSale {
-                  background-color: $accentColor;
-                }
-              }
+					h2 {
+						font: $cardTitleFont;
+						text-transform: uppercase;
+						margin-bottom: 42px;
+					}
+				}
+			}
+		}
+	}
 
-              &:has(.tagSale:only-child) {
-                justify-content: flex-end;
-              }
-            }
+	#help_container_content {
+		@include flex(
+			$wrap: nowrap,
+			$justify: space-between,
+			$align: center,
+			$row-gap: 30px
+		);
+		position: relative;
+		padding-bottom: 83px;
+		margin-bottom: 86px;
+		border-bottom: 1px solid $borderColor;
 
-            .cardInteract {
-              @include flex(column, nowrap, $row-gap: 0.5rem);
-              padding: 1rem;
-              z-index: 1;
+		.help_container_vignette {
+			@include flex(column, nowrap, space-between, center);
+			text-align: center;
+			height: 100%;
 
-              button {
-                aspect-ratio: 1/1;
-                width: 35px;
-                background-color: $white;
-                border-radius: 50%;
-                opacity: 0;
-                transform: translateX(2rem);
-                transition: $transitionFast;
-                transition-property: color, opacity, transform;
+			img {
+				aspect-ratio: 1/1;
+				object-fit: contain;
+				height: 80px;
+				margin-bottom: 38px;
+			}
 
-                &:nth-child(2) {
-                  transition-delay: 100ms;
-                }
+			h2 {
+				font: $helpTitleFont;
+				margin-bottom: 23px;
+				text-transform: uppercase;
+			}
 
-                &:first-child {
-                  transition-delay: 200ms;
-                }
+			p {
+				font: $helpTextFont;
+			}
+		}
+	}
 
-                &:hover {
-                  color: $accentColor;
-                }
-              }
-            }
+	&.listSliderRow {
+		@include flex($justify: space-between, $align: center);
+		position: relative;
+		margin-bottom: 2.5rem;
 
-            .cartBtn {
-              display: inline-block;
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              margin: 1rem;
-              width: calc(100% - 2rem);
-              background-color: $white;
-              border: 1px dashed $borderColor;
-              border-radius: $roundRadius;
-              opacity: 0;
-              font: $interactionFont;
-              text-align: center;
-              text-transform: uppercase;
-              transform: translateY(100%);
-              transition: $transitionFast;
-              transition-property: background, border, color, opacity, transform;
+		.contentList {
+			@include flex($align: center);
+			position: relative;
+			width: 100%;
 
-              &:hover {
-                background-color: $accentColor;
-                color: $white;
-                border-color: transparent;
-              }
-            }
-          }
+			.listSlide {
+				@include flex($wrap: nowrap, $col-gap: 1rem);
+				position: inherit;
+				width: 100%;
+				overflow: hidden;
 
-          &:hover .card {
-            .cartBtn {
-              opacity: 1;
-              transform: translateY(0);
-            }
+				.slideEl {
+					position: inherit;
+					@include flex(
+						column,
+						nowrap,
+						$align: center,
+						$row-gap: 1rem
+					);
+					flex: 0 0
+						calc(
+							100% / var(--cols) - 1rem / var(--cols) *
+								(var(--cols) - 1)
+						);
+					margin-bottom: 2.5rem;
 
-            .cardInteract > button {
-              transform: translateX(0);
-              opacity: 1;
-            }
+					.card {
+						position: inherit;
+						aspect-ratio: 1/1;
+						width: 100%;
+						border: 1px solid $borderColor;
+						cursor: pointer;
+						overflow: hidden;
 
-            &[style*="--thumb-var-2"] {
-              background-image: var(--thumb-var-2);
-              transition-duration: 300ms;
-            }
+						.cardTags {
+							@include flex($justify: space-between);
+							pointer-events: none;
+							width: 100%;
+							padding: 0.8rem;
 
-            &:not([style*="--thumb-var-2"]) {
-              background-size: 110%;
-            }
-          }
-        }
+							.productTag {
+								font: $tagFont;
+								color: $white;
+								text-transform: uppercase;
+								border-radius: $roundRadius;
+								padding-inline: 0.875rem;
 
-        .cardDetails {
-          text-align: center;
-          font: $labelFont;
+								&.tagHot {
+									background-color: $tiffanyBlue;
+								}
 
-          h3 {
-            font-weight: inherit;
-            text-transform: uppercase;
-            margin-bottom: 0.75rem;
-          }
-        }
+								&.tagSale {
+									background-color: $accentColor;
+								}
+							}
 
-        &.catSlide .slideEl {
-          align-items: flex-start;
-        }
-      }
-    }
-  }
+							&:has(.tagSale:only-child) {
+								justify-content: flex-end;
+							}
+						}
 
-  &#products_recommendation {
-    @include grid(3, $gap: 1rem, $row-size: minmax(auto, 350px));
-    margin-bottom: 5.625rem;
+						.cardInteract {
+							@include flex(column, nowrap, $row-gap: 0.5rem);
+							padding: 1rem;
+							z-index: 1;
 
-    .productCard {
-      position: relative;
-      padding: 2.375rem;
-      background: no-repeat var(--thumb-var-1) center/ auto 100%;
-      text-transform: uppercase;
-      transition: background $transitionSlow;
+							button {
+								aspect-ratio: 1/1;
+								width: 35px;
+								background-color: $white;
+								border-radius: 50%;
+								opacity: 0;
+								transform: translateX(2rem);
+								transition: $transitionFast;
+								transition-property: color, opacity, transform;
 
-      h2 {
-        font: $cardTitleFont;
-      }
+								&:nth-child(2) {
+									transition-delay: 100ms;
+								}
 
-      & > span {
-        font: $cardDescFont;
-        text-transform: capitalize;
-        margin-bottom: 1rem;
-      }
+								&:first-child {
+									transition-delay: 200ms;
+								}
 
-      &:not(.largeCard) {
-        aspect-ratio: 1.07/1;
-      }
+								&:hover {
+									color: $accentColor;
+								}
+							}
+						}
 
-      &.largeCard {
-        @include flex(column, nowrap, flex-end);
-        grid-column: 1/3;
-        padding: 5.625rem 3.125rem;
-        color: $white;
+						.cartBtn {
+							display: inline-block;
+							position: absolute;
+							left: 0;
+							bottom: 0;
+							margin: 1rem;
+							width: calc(100% - 2rem);
+							background-color: $white;
+							border: 1px dashed $borderColor;
+							border-radius: $roundRadius;
+							opacity: 0;
+							font: $interactionFont;
+							text-align: center;
+							text-transform: uppercase;
+							transform: translateY(100%);
+							transition: $transitionFast;
+							transition-property: background, border, color,
+								opacity, transform;
 
-        h2 {
-          margin-bottom: 2.375rem;
-        }
-      }
+							&:hover {
+								background-color: $accentColor;
+								color: $white;
+								border-color: transparent;
+							}
+						}
+					}
 
-      &:hover {
-        background-size: auto 110%;
-      }
-    }
-  }
-}
+					&:hover .card {
+						.cartBtn {
+							opacity: 1;
+							transform: translateY(0);
+						}
 
-#to_shop_container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+						.cardInteract > button {
+							transform: translateX(0);
+							opacity: 1;
+						}
+					}
+				}
 
-#to_shop_img_girl {
-  height: 200px;
-  width: 50%;
-  background-image: url(./images/banner/banner-31.jpg);
-}
+				.cardDetails {
+					text-align: center;
+					font: $labelFont;
 
-#to_shop_img_crayon {
-  background-image: url(../images/banner/banner-32.jpg);
+					h3 {
+						font-weight: inherit;
+						text-transform: uppercase;
+						margin-bottom: 0.75rem;
+					}
+				}
+
+				&.catSlide .slideEl {
+					align-items: flex-start;
+				}
+			}
+		}
+	}
+
+	&#products_recommendation {
+		@include grid(2fr 1fr, $gap: 1rem);
+		margin-bottom: 5.625rem;
+
+		.productCard {
+			position: relative;
+			padding: 2.375rem;
+			background: no-repeat var(--thumb-var-1) center/ auto 100%;
+			text-transform: uppercase;
+			transition: background $transitionSlow;
+
+			h2 {
+				font: $cardTitleFont;
+			}
+
+			& > span {
+				font: $cardDescFont;
+				text-transform: capitalize;
+				margin-bottom: 1rem;
+			}
+
+			&:not(.largeCard) {
+				aspect-ratio: 1.07/1;
+			}
+
+			&:hover {
+				background-size: auto 110%;
+			}
+		}
+
+		.largeCard {
+			@include flex(column, nowrap, flex-end);
+			padding: 5.625rem 3.125rem;
+			color: $white;
+
+			h2 {
+				margin-bottom: 2.375rem;
+			}
+		}
+	}
 }
 
 #help-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 footer {
-  @include flex($row-gap: 4rem);
-  padding: 5.625rem 1.875rem 0;
-  background-color: $footerBackground;
+	@include flex($row-gap: 4rem);
+	padding: 5.625rem 1.875rem 0;
+	background-color: $footerBackground;
 
-  .footCol {
-    &:not(#bottom-row) {
-      @include flex(column, nowrap, $row-gap: 2rem);
-      flex: 0 0 25%;
+	.footCol {
+		&:not(#bottom-row) {
+			@include flex(column, nowrap, $row-gap: 2rem);
+			flex: 0 0 25%;
 
-      h2 {
-        text-transform: uppercase;
-        font: $footerTitleFont;
-      }
+			h2 {
+				text-transform: uppercase;
+				font: $footerTitleFont;
+			}
 
-      ul {
-        @include flex(column, nowrap, $row-gap: 0.75rem);
-        font: $linkFont;
-        text-transform: capitalize;
+			ul {
+				@include flex(column, nowrap, $row-gap: 0.75rem);
+				font: $linkFont;
+				text-transform: capitalize;
 
-        li {
-          @include flex($wrap: nowrap, $align: center, $col-gap: 0.5rem);
-        }
-      }
-    }
+				li {
+					@include flex(
+						$wrap: nowrap,
+						$align: center,
+						$col-gap: 0.5rem
+					);
+				}
+			}
+		}
 
-    &#bottom-row {
-      @include flex($justify: space-between);
-      width: 100%;
-      padding-block: 2.5rem;
-      border-top: 1px solid $borderFooterColor;
+		&#bottom-row {
+			@include flex($justify: space-between);
+			width: 100%;
+			padding-block: 2.5rem;
+			border-top: 1px solid $borderFooterColor;
 
-      & > div {
-        font: $footerNotes;
-      }
+			& > div {
+				font: $footerNotes;
+			}
 
-      #mailto {
-        @include flex(column, $row-gap: 1rem);
-        max-width: 368px;
+			#mailto {
+				@include flex(column, $row-gap: 1rem);
+				max-width: 368px;
 
-        #mail-input {
-          @include flex($wrap: nowrap, $justify: space-between, $align: center);
-          width: 100%;
-          border-bottom: 1px solid $black;
+				#mail-input {
+					@include flex(
+						$wrap: nowrap,
+						$justify: space-between,
+						$align: center
+					);
+					width: 100%;
+					border-bottom: 1px solid $black;
 
-          input {
-            @include inputReset;
-            padding-left: 1rem;
-            height: 42px;
-            font: $inputFont;
-            width: 100%;
+					input {
+						@include inputReset;
+						padding-left: 1rem;
+						height: 42px;
+						font: $inputFont;
+						width: 100%;
 
-            &::placeholder {
-              color: inherit;
-            }
-          }
+						&::placeholder {
+							color: inherit;
+						}
+					}
 
-          #mail-submit {
-            padding-inline: 0.25rem;
-            font-size: 1.125rem;
-            line-height: 1.5em;
-            transition: color $transitionFast;
+					#mail-submit {
+						padding-inline: 0.25rem;
+						font-size: 1.125rem;
+						line-height: 1.5em;
+						transition: color $transitionFast;
 
-            &:hover {
-              color: $accentColor;
-            }
-          }
-        }
-      }
+						&:hover {
+							color: $accentColor;
+						}
+					}
+				}
+			}
 
-      #copy {
-        @include flex(
-          column,
-          $justify: center,
-          $align: flex-end,
-          $row-gap: 28px
-        );
-      }
-    }
-  }
+			#copy {
+				@include flex(
+					column,
+					$justify: center,
+					$align: flex-end,
+					$row-gap: 28px
+				);
+			}
+		}
+	}
 }
 
 #navbar-mobile-endpage {
-  @include grid(4);
-  z-index: 10;
-  position: sticky;
-  bottom: 0;
-  padding: 0.5rem 1rem;
-  background-color: $white;
-  box-shadow: 0 1px 12px 2px hsla(0, 0%, 56%, 0.3);
+	@include grid(repeat(4, 1fr));
+	z-index: 10;
+	position: sticky;
+	bottom: 0;
+	padding: 0.75rem 1rem;
+	background-color: $white;
+	box-shadow: 0 1px 12px 2px hsla(0, 0%, 56%, 0.3);
 
-  .navEl {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
+	.navEl {
+		@include flex(column, $align: center, $row-gap: 4px);
+		width: 100%;
+		text-align: center;
+		font-size: 18px;
 
-    & > span {
-      font-family: $mainFontFam;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1;
-      text-transform: uppercase;
-      margin-top: 3px;
-    }
-  }
+		& > span {
+			font-family: $mainFontFam;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 1;
+			text-transform: uppercase;
+			margin-top: 3px;
+		}
+
+		.bubbleNb {
+			left: unset;
+			bottom: unset;
+			top: -25%;
+			right: 25%;
+		}
+	}
 }

@@ -144,6 +144,24 @@
 			margin-bottom: 0.625rem;
 		}
 
+		#to_shop_container > div {
+			flex-basis: 100%;
+		}
+
+		#help_container_content {
+			flex-direction: column;
+
+			.help_container_vignette {
+				h2 {
+					margin-bottom: 5px;
+				}
+
+				img {
+					margin-bottom: 13px;
+				}
+			}
+		}
+
 		&#products_recommendation {
 			grid-template-columns: 100%;
 			grid-template-rows: 1fr 2fr;
