@@ -25,7 +25,7 @@ titleDev.forEach(title =>
 
 		const list = e.target.nextElementSibling;
 
-		if (document.getElementById('developed')) {
+		if (list.id === 'developed') {
 			list.removeAttribute('id');
 			list.removeAttribute('style');
 			return;
@@ -34,4 +34,16 @@ titleDev.forEach(title =>
 		list.id = 'developed';
 		list.style.height = list.scrollHeight + 'px';
 	})
+);
+
+const rollList = el => {
+	el.scrollTo(el.scrollX + 250, 0);
+};
+
+const interactBtns = document.querySelectorAll('.sliderInteractBtn');
+
+interactBtns.forEach(button =>
+	button.addEventListener('click', e =>
+		rollList(e.target.closest('.listSliderRow').querySelector('.listSlide'))
+	)
 );

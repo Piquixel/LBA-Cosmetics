@@ -344,16 +344,14 @@
 		<!-- Gemini -->
 		<section id="product_showcase">
 			<div id="product_showcase_container">
-				<div class="product_showcase_img">
+				<div id="product_showcase_no_img">
 					<h2>ultimate face palette</h2>
-					<p>Discover The Iconic Product, Now Reimagined In An Upgraded Formula. Mini Blush Lasts For Up To 16 Hours With A Comfortable,...</p>
-					<a href="#" class="see-more">See More</a>
+					<p id="product-showcase-p">Discover The Iconic Product, Now Reimagined In An Upgraded Formula. Mini Blush Lasts For Up To 16 Hours With A Comfortable,...</p>
+					<a href="#" id="see-more">See More</a>
 				</div>
-				<div class="product_showcase_img">
-
+				<div id="product_showcase_img"></div>
+				<div id="product_showcase-index">
 				</div>
-			</div>
-			<div id="product_showcase-index">
 
 			</div>
 		</section>

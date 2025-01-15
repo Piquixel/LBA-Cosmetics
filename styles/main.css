@@ -514,6 +514,58 @@ section.listSliderRow .contentList .listSlide .cardDetails h3 {
 section.listSliderRow .contentList .listSlide.catSlide .slideEl {
   align-items: flex-start;
 }
+section #product_showcase_container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 0;
+  margin-bottom: 86px;
+}
+section #product_showcase_container h2 {
+  font: 300 55px/60px "Be Vietnam Pro", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+section #product_showcase_container #product_showcase_no_img {
+  width: 50%;
+}
+section #product_showcase_container #product_showcase_no_img #product-showcase-p {
+  font: 300 16px/26px "Be Vietnam Pro", sans-serif;
+  max-width: 420px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+section #product_showcase_container #product_showcase_no_img #see-more {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  padding-inline: 3rem;
+  border-radius: 30px;
+  font: 500 0.75rem/3rem "Be Vietnam Pro", sans-serif;
+  text-transform: uppercase;
+}
+section #product_showcase_container #product_showcase_img {
+  width: 50%;
+  height: 640px;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  background-image: url(../images/banner/banner-33.jpg);
+  transition: background 1s ease;
+}
+section #product_showcase_container #product_showcase_img:hover {
+  background-size: auto 110%;
+}
+section #product_showcase_container #product_showcase-index {
+  aspect-ratio: 59/74;
+  height: 370px;
+  background-image: url(../images/banner/banner-34.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
 section#products_recommendation {
   display: grid;
   grid-template-columns: 2fr 1fr;
