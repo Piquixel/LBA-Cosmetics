@@ -1,6 +1,6 @@
 <footer>
     <div class="footCol">
-        <h2>Contact</h2>
+        <h2>Contact<span class="fa-solid fa-sharp fa-plus"></span></h2>
         <ul>
             <li>
                 <img src="images/icons/phone.svg" alt="" />
@@ -19,7 +19,7 @@
         </ul>
     </div>
     <div class="footCol">
-        <h2>About Us</h2>
+        <h2>About Us<span class="fa-solid fa-sharp fa-plus"></span></h2>
         <ul>
             <li><a href="#">FAQs</a></li>
             <li><a href="#">Shipping</a></li>
@@ -30,7 +30,9 @@
         </ul>
     </div>
     <div class="footCol">
-        <h2>Corporate</h2>
+        <h2>
+            Corporate<span class="fa-solid fa-sharp fa-plus"></span>
+        </h2>
         <ul>
             <li><a href="#">Careers</a></li>
             <li><a href="#">About Us</a></li>
@@ -41,7 +43,9 @@
         </ul>
     </div>
     <div class="footCol">
-        <h2>Follow Us</h2>
+        <h2>
+            Follow Us<span class="fa-solid fa-sharp fa-plus"></span>
+        </h2>
         <ul>
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Facebook</a></li>
@@ -70,12 +74,17 @@
     </div>
 </footer>
 <nav id="navbar-mobile-endpage">
-    <a href="#" class="navEl fa-solid fa-border-all"><br /><span>shop</span></a>
+    <a href="#" class="navEl fa-solid fa-border-all">
+        <span>shop</span>
+    </a>
     <a href="#" class="navEl fa-regular fa-user">
-        <br /><span>account</span>
+        <span>account</span>
     </a>
     <span class="navEl fa-solid fa-magnifying-glass">
-        <br /><span>search</span>
+        <span>search</span>
     </span>
-    <a href="#" class="navEl fa-sharp fa-regular fa-heart"><br /><span>wishlist</span><span class="bubbleNb">0</span></a>
+    <a href="#" class="navEl fa-sharp fa-regular fa-heart">
+        <span>wishlist</span>
+        <span class="bubbleNb">0</span>
+    </a>
 </nav>

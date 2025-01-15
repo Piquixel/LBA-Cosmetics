@@ -13,10 +13,10 @@
 	gap: $row-gap $col-gap;
 }
 
-@mixin grid($cols: 1, $rows: 1, $gap: 0, $col-size: 1fr, $row-size: 1fr) {
+@mixin grid($col-sz: 1fr, $row-sz: 1fr, $gap: 0) {
 	display: grid;
-	grid-template-columns: repeat($cols, $col-size);
-	grid-template-rows: repeat($rows, $row-size);
+	grid-template-columns: $col-sz;
+	grid-template-rows: $row-sz;
 	gap: $gap;
 }
 

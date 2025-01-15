@@ -29,7 +29,7 @@
                 <img
                     src="./images/logo.png"
                     alt="Logo Ario"
-                    width="90px" />
+                    width="96px" />
             </a>
             <div id="nav-panel">
                 <span
@@ -69,7 +69,7 @@
                 <img
                     src="./images/logo.png"
                     alt="Logo Ario"
-                    width="90px" />
+                    width="96px" />
             </a>
             <div id="nav-panel">
                 <a class="navEl fa-solid fa-bag-shopping">
