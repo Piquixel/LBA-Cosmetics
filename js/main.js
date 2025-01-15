@@ -35,15 +35,3 @@ titleDev.forEach(title =>
 		list.style.height = list.scrollHeight + 'px';
 	})
 );
-
-const rollList = el => {
-	el.scrollTo(el.scrollX + 250, 0);
-};
-
-const interactBtns = document.querySelectorAll('.sliderInteractBtn');
-
-interactBtns.forEach(button =>
-	button.addEventListener('click', e =>
-		rollList(e.target.closest('.listSliderRow').querySelector('.listSlide'))
-	)
-);
